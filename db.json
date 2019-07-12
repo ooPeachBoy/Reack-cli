@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "username": "ww",
+      "password": "wwwe",
+      "sex": 1,
+      "cityId": "4",
+      "id": 1
+    }
+  ],
+  "cityList": [
+    {
+      "id": 1,
+      "name": "北京市",
+      "cityId": "0001"
+    },
+    {
+      "id": 2,
+      "name": "深圳市",
+      "cityId": "0002"
+    },
+    {
+      "id": 3,
+      "name": "上海市",
+      "cityId": "0003"
+    },
+    {
+      "id": 4,
+      "name": "广州市",
+      "cityId": "0004"
+    }
+  ]
+}
