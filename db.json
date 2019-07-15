@@ -1,11 +1,39 @@
 {
   "users": [
     {
-      "username": "ww",
-      "password": "wwwe",
+      "username": "张三",
+      "password": "123",
       "sex": 1,
-      "cityId": "4",
+      "city": "0001",
       "id": 1
+    },
+    {
+      "username": "李四",
+      "password": "123",
+      "sex": 0,
+      "city": "0002",
+      "id": 2
+    },
+    {
+      "username": "admin",
+      "password": "123",
+      "sex": 0,
+      "city": "0003",
+      "id": 3
+    },
+    {
+      "username": "我的天",
+      "password": "123",
+      "sex": 0,
+      "city": "0002",
+      "id": 4
+    },
+    {
+      "username": "我的地",
+      "password": "123",
+      "sex": 0,
+      "city": "0004",
+      "id": 5
     }
   ],
   "cityList": [
@@ -28,6 +56,40 @@
       "id": 4,
       "name": "广州市",
       "cityId": "0004"
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "name": "吃饭"
+    },
+    {
+      "id": 2,
+      "name": "睡觉"
+    },
+    {
+      "id": 3,
+      "name": "打豆豆"
+    },
+    {
+      "name": "拉屎",
+      "id": 4
+    },
+    {
+      "name": "再吃饭",
+      "id": 5
+    },
+    {
+      "name": "ww",
+      "id": 6
+    },
+    {
+      "name": "wweee",
+      "id": 7
+    },
+    {
+      "name": "斤斤计较",
+      "id": 8
     }
   ]
 }

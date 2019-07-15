@@ -1,0 +1,21 @@
+body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+hr {
+  margin-top: 40px;
+}
+h3 {
+  margin-top: 50px;
+}
+.box {
+  display: flex;
+}
+.ant-btn-danger {
+  float: right;
+}
+.ant-typography mark{
+  background: honeydew;
+  padding: 5px;
+  margin-right: 10px;
+}
