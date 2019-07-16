@@ -1,5 +1,6 @@
 //创建reducer 纯函数
 import * as constants from "./constants";
+import { object } from "prop-types";
 
 let initState = {
   todoList: [],
@@ -13,10 +14,17 @@ export default (state = initState, action) => {
     return Object.assign({}, state, { todoList: action.list });
   }
   if (action.type === constants.TODO_ADD) {
-    return Object.assign({}, state, { todoList: [...state.todoList, action.todo] });
+    return Object.assign({}, state, {
+      todoList: [...state.todoList, action.todo]
+    });
   }
   if (action.type === constants.CHANGE_INPUT) {
     return Object.assign({}, state, { inputVal: action.value });
+  }
+  if (action.type === constants.DELETE_TODO) {
+    return Object.assign({}, state, {
+      todoList: state.todoList.filter(item => item.id !== action.id)
+    });
   }
   console.log(state, action);
   return state;

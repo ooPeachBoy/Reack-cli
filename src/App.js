@@ -3,7 +3,7 @@ import {
   getTodoList,
   postTodoList,
   createChgInputAct,
-  createDleTodoAct
+  delTodoList
 } from "./store/actionCreats";
 import store from "./store";
 import { Button, List, Input, message, Popconfirm, Typography } from "antd";
@@ -23,15 +23,7 @@ store.dispatch = action => {
     next(action);
   }
 };
-function confirm(e) {
-  console.log(e);
-  message.success("删除成功");
-}
 
-function cancel(e) {
-  console.log(e);
-  message.error("删除失败");
-}
 class App extends Component {
   constructor() {
     super();
@@ -69,8 +61,7 @@ class App extends Component {
       event.target.parentNode.children[0].children[0].innerText
     );
     console.log(idVal);
-    store.dispatch(createDleTodoAct(idVal));
-    
+    store.dispatch(delTodoList(idVal));
   };
   render() {
     return (
@@ -105,17 +96,9 @@ class App extends Component {
               </Typography.Text>
               {item.name}
 
-              <Popconfirm
-                title="你确定要删除这条信息吗?"
-                onConfirm={confirm}
-                onCancel={cancel}
-                okText="Yes"
-                cancelText="No"
-              >
-                <Button type="danger" onClick={this.handleDle}>
-                  删除
-                </Button>
-              </Popconfirm>
+              <Button type="danger" onClick={this.handleDle}>
+                删除
+              </Button>
             </List.Item>
           )}
         />

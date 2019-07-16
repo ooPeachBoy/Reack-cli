@@ -67,22 +67,19 @@ export const getTodoList = () => {
  * @param {type} Ajax
  * @return: DELETE_TODO;
  */
-export const createDleTodoAct = idVal => ({
+export const createDleTodoAct = id => ({
   type: constants.DELETE_TODO,
-  idVal
+  id
 });
-export const delTodoList = () => {
+export const delTodoList = idVal => {
   return (dispatch, getState) => {
-    fetch("http://localhost:3000/todos", {
-      method: "DELETE",
-      headers: {
-        "Content-Type": " application/json"
-      }
+    fetch(`http://localhost:3000/todos/${idVal}`, {
+      method: "DELETE"
     })
       .then(response => response.json())
       .then(res => {
         console.log(res);
-        dispatch(createDleTodoAct(res));
+        dispatch(createDleTodoAct(idVal));
       });
   };
 };
