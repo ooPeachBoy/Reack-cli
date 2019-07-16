@@ -80,6 +80,6 @@ export const delTodoList = idVal => {
       .then(res => {
         console.log(res);
         dispatch(createDleTodoAct(idVal));
-      });
+       });
   };
 };
